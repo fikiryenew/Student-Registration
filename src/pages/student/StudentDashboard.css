@@ -1,0 +1,79 @@
+.student-container {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.student-title {
+  margin-bottom: 0.5rem;
+  color: #1f2937;
+  font-size: 1.75rem;
+}
+
+.student-subtitle {
+  color: #6b7280;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.student-card {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.student-card-title {
+  margin-bottom: 1rem;
+  color: #1f2937;
+  font-size: 1.2rem;
+}
+
+.status-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.status-label {
+  font-weight: 500;
+  color: #374151;
+}
+
+.status-badge {
+  background-color: #fef3c7;
+  color: #d97706;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.status-description {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-top: 1rem;
+  line-height: 1.4;
+}
+
+.notice-title {
+  margin-bottom: 0.75rem;
+  color: #1f2937;
+  font-size: 1.2rem;
+}
+
+.notice-text {
+  font-size: 0.9rem;
+  color: #4b5563;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.dashboard-loading {
+  padding: 2rem;
+  text-align: center;
+  color: #4b5563;
+  font-size: 1rem;
+}

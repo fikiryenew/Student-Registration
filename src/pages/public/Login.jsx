@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate, useLocation, Link } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import API from '../../api/axios';
+import './Login.css';
 
 export const Login = () => {
   const { login } = useAuth();
@@ -23,57 +24,41 @@ export const Login = () => {
   };
 
   return (
-    <div className="card" style={{ maxWidth: '400px', margin: '2rem auto', padding: '2rem' }}>
-      <h2 style={{ marginBottom: '1.5rem', textAlign: 'center' }}>Login to SRMS</h2>
+    <div className="login-card">
+      <h2 className="login-title">Login to SRMS</h2>
       
-      {location.state?.message && <div className="alert-success" style={{ marginBottom: '1rem' }}>{location.state.message}</div>}
-      {error && <div className="alert-error" style={{ marginBottom: '1rem', color: '#dc2626' }}>{error}</div>}
+      {location.state?.message && <div className="alert-success">{location.state.message}</div>}
+      {error && <div className="alert-error">{error}</div>}
       
       <form onSubmit={handleSubmit}>
-        <div className="form-group" style={{ marginBottom: '1rem' }}>
-          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500' }}>Email</label>
+        <div className="form-group">
+          <label>Email</label>
           <input
             type="email"
             required
             className="form-control"
-            style={{ width: '100%', padding: '0.5rem', borderRadius: '4px', border: '1px solid #d1d5db' }}
             onChange={(e) => setCredentials({ ...credentials, email: e.target.value })}
           />
         </div>
         
         <div className="form-group" style={{ marginBottom: '1.5rem' }}>
-          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500' }}>Password</label>
+          <label>Password</label>
           <input
             type="password"
             required
             className="form-control"
-            style={{ width: '100%', padding: '0.5rem', borderRadius: '4px', border: '1px solid #d1d5db' }}
             onChange={(e) => setCredentials({ ...credentials, password: e.target.value })}
           />
         </div>
         
-        {/* Updated Button Styling: Solid blue background with white text */}
-        <button 
-          type="submit" 
-          style={{ 
-            width: '100%', 
-            padding: '0.75rem', 
-            backgroundColor: '#2563eb', 
-            color: '#ffffff', 
-            border: 'none', 
-            borderRadius: '4px', 
-            fontWeight: '600', 
-            fontSize: '1rem',
-            cursor: 'pointer' 
-          }}
-        >
+        <button type="submit" className="btn-submit">
           Sign In
         </button>
       </form>
 
-      <div style={{ marginTop: '1.5rem', textAlign: 'center', fontSize: '0.9rem', color: '#6b7280' }}>
+      <div className="login-footer">
         Don't have an account?{' '}
-        <Link to="/register" style={{ color: '#2563eb', textDecoration: 'underline', fontWeight: '500' }}>
+        <Link to="/register" className="login-link">
           Register here
         </Link>
       </div>
